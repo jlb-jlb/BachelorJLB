@@ -1,7 +1,9 @@
+# %%
 from huggingface_hub import notebook_login
 
 notebook_login()
 
+# %%
 from utils.lightning_configs import LitModel
 
 parameters = {

@@ -1,0 +1,66 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
+
+%labels
+    APPLCATION_NAME JLB Experiment Thesis
+    AUTHOR_NAME Joscha Lasse Bisping
+    AUTHOR_EMAIL EMAIL@tu-berlin.de
+    YEAR 2024
+
+
+%post 
+    apt-get -y update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
+    libblas-dev \
+    liblapack-dev \
+    git
+
+    # Upgrade pip
+    python -m pip install --upgrade pip
+    
+    # Install numpy
+    python -m pip --no-cache-dir install \
+        numpy \
+        pandas \
+        pyarrow==14.0.2 \
+        tensorboard \
+        lightning \
+        transformers \
+        datasets \
+        evaluate \
+        accelerate \
+        gluonts \
+        ujson \
+        tsai \
+        tqdm \
+        scikit-learn \
+        jupyter \
+        ipykernel \
+        ipywidgets \
+        mne \
+        matplotlib
+
+
+
+
+%runscript
+    python3 -c 'import sys;print(sys.version)'
+    pip list
+		python3 -c 'import torch; print(torch.cuda.is_available())'
+
+%environment
+    export PATH=/usr/local/bin:$PATH
+
+
+
+# goto dir 
+# sudo singularity build /builds/testContainer.sif /def_files/my_test_image.def
+# singularity run testContainer.sif
+
+
+# the ":" is important
+# scp testContainer.sif <user>@gateway.<hpc.address.de>:   

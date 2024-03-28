@@ -278,3 +278,5 @@ if __name__ == "__main__":
         ).file_tuples
 
         main(target_path, data_paths, start_idx=0, seiz_or_bckg="bckg")
+
+    print("DONE")

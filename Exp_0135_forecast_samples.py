@@ -19,8 +19,6 @@ from utils.lightning_configs import LitModelTimeEmbed, LitModel
 from utils.experiment_utils import scaler_local_min_max
 from lightning.pytorch import Trainer, seed_everything
 
-seed_everything(42, workers=True)
-
 import os
 import pickle
 import numpy as np
@@ -31,6 +29,8 @@ from sklearn.preprocessing import MinMaxScaler
 samples = os.listdir(parameters["samples_path"])
 samples.sort()
 
+
+seed_everything(42, workers=True)
 models = [
     "transformer",
     "autoformer",
