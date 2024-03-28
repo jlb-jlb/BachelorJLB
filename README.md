@@ -3,6 +3,17 @@
 This repository contains the essential code from my bachelor thesis.
 
 
+# Data
+
+The already preprocessed data can be accessed via the following link:
+
+https://drive.google.com/drive/folders/1io3YIOxBweMbQQMM5UtqYP7su1pTc25v?usp=sharing
+
+For the experiment I used the `DATA_EEG/EEG_PREP_ROBUST_TRAIN` for training,
+the `DATA_EEG/TEST_50` for testing and the `DATA_EEG/VAL_70` for validation.
+
+These Folders `EEG_PREP_ROBUST_TRAIN`, `TEST_50` and `VAL_70` can be downloaded and placed in the `DATA_EEG` folder.
+
 # Installation
 During this project I used a singularity container to manage the environment and execution of all tests.
 
