@@ -31,6 +31,8 @@ samples.sort()
 
 
 seed_everything(42, workers=True)
+os.makedirs(parameters["experiment_path"], exist_ok=True)
+os.makedirs(parameters["samples_path"], exist_ok=True)
 models = [
     "transformer",
     "autoformer",
