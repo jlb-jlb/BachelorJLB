@@ -41,6 +41,9 @@ and afterwards run one of the shell files inside the container. Example:
 ./Exp_0133_run_Autoformer.sh
 ```
 
+# Preprocessing
+If you want to preprocess the data on your own, you need to download it from the official Temple University Data Corpus. This requires a registration. The data is available under https://isip.piconepress.com/projects/tuh_eeg/
+
 
 
 ## References
