@@ -3,7 +3,7 @@
 This repository contains the essential code from my bachelor thesis.
 
 
-# Data
+## Data
 
 The already preprocessed data can be accessed via the following link:
 
@@ -14,12 +14,12 @@ the `DATA_EEG/TEST_50` for testing and the `DATA_EEG/VAL_70` for validation.
 
 These Folders `EEG_PREP_ROBUST_TRAIN`, `TEST_50` and `VAL_70` can be downloaded and placed in the `DATA_EEG` folder.
 
-# Installation
+## Installation
 During this project I used a singularity container to manage the environment and execution of all tests.
 
 A quick guide how I set up the singularity container can be found here:
 
-https://jlb-jlb.notion.site/Singularity-4-0-2-f15058d2e4fd486388f36f45ba80c60a?pvs=4
+https://jlb-jlb.notion.site/Singularity-4-0-2-f15058d2e4fd486388f36f45ba80c60a
 
 
 In case some dependencies are missing, you can add those to the Singularity definition file or you can install those later. If you choose to install them later they will not be written to the container, but rather a local directory which the container can accesss.
@@ -27,7 +27,9 @@ In case some dependencies are missing, you can add those to the Singularity defi
 The .def file is available in this repository.
 The .sif file can also be found and downloaded in the data folder.
 
-# Experiment
+## Experiment
+
+For both the Experiment and Preprocessing, please ensure that the data paths match!
 
 to run the experiment I suggest you start the container with 
 
@@ -41,12 +43,21 @@ and afterwards run one of the shell files inside the container. Example:
 ./Exp_0133_run_Autoformer.sh
 ```
 
-# Preprocessing
+## Preprocessing
 If you want to preprocess the data on your own, you need to download it from the official Temple University Data Corpus. This requires a registration. The data is available under https://isip.piconepress.com/projects/tuh_eeg/
 
+---
+
+### Disclaimers
+
+- The docstring of functions has been made with the help of ChatGPT.
+- The code was formatted using black. <a href="#12">[12]</a>
 
 
-## References
+
+
+
+### References
 
 <a id="1"> [1] </a>
 Alexandre Gramfort, Martin Luessi, Eric Larson, Denis A. Engemann, Daniel Strohmeier, Christian Brodbeck, Roman Goj, Mainak Jas, Teon Brooks, Lauri Parkkonen, and Matti S. Hämäläinen. MEG and EEG data analysis with MNE-Python. Frontiers in Neuroscience, 7(267):1–13, 2013. doi:10.3389/fnins.2013.00267 
@@ -84,3 +95,5 @@ Hunter, John D. (2007): Matplotlib: A 2D Graphics Environment. In Comput. Sci. E
 <a id="11"> [11] </a>
 Detlefsen, Nicki; Borovec, Jiri; Schock, Justus; Jha, Ananya; Koker, Teddy; Di Liello, Luca et al. (2022): TorchMetrics - Measuring Reproducibility in PyTorch. In JOSS 7 (70), p. 4101. DOI: 10.21105/joss.04101.
 
+<a id="12"> [12] </a>
+Langa, Ł., & contributors to Black. Black: The uncompromising Python code formatter [Computer software]. https://github.com/psf/black

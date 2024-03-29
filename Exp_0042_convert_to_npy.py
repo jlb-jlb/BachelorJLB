@@ -29,7 +29,10 @@ def main(data_path, target_path):
 if __name__ == "__main__":
     parameters = {
         "data_paths": ["DATA_EEG/EEG_TEST", "DATA_EEG/EEG_TRAIN"],
-        "target_paths": ["DATA_EEG/EEG_PREP_ROBUST_TEST", "DATA_EEG/EEG_PREP_ROBUST_TRAIN"],
+        "target_paths": [
+            "DATA_EEG/EEG_PREP_ROBUST_TEST",
+            "DATA_EEG/EEG_PREP_ROBUST_TRAIN",
+        ],
     }
 
     for data_path, target_path in zip(
