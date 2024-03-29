@@ -336,7 +336,12 @@ elif any(
         time_embedding=True,
         lags_sequence=parameters["lags_sequence"],
     )
-
+else:
+    logging.error(f"Model {parameters['model_name']} not found.")
+    logging.error(
+        f"Available models (Name must include the word from one of these models): {models_no_timeembedding + models_with_timeembedding}"
+    )
+    raise ValueError("Model not found.")
 # DataLoader
 
 train_dataloader = DataLoader(
@@ -461,11 +466,11 @@ trainer = Trainer(
 #############################################################################
 
 ##########  ########        ##########      ##    ##      ##
-    ##      ##      ##      ##      ##      ##    ####    ##
-    ##      ##      ##      ##      ##      ##    ##  ##  ##
-    ##      ########        ##########      ##    ##    ####
-    ##      ##     ##       ##      ##      ##    ##      ##
-    ##      ##      ##      ##      ##      ##    ##      ##
+##      ##      ##      ##      ##      ##    ####    ##
+##      ##      ##      ##      ##      ##    ##  ##  ##
+##      ########        ##########      ##    ##    ####
+##      ##     ##       ##      ##      ##    ##      ##
+##      ##      ##      ##      ##      ##    ##      ##
 
 #############################################################################
 
