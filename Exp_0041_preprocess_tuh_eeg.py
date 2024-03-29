@@ -262,17 +262,17 @@ if __name__ == "__main__":
     )
     mne.set_log_level("WARNING")
     parameters = {
-        "data_paths": ["TUH_EEG_SEIZ/edf/dev", "TUH_EEG_SEIZ/edf/train"],
-        "target_paths": ["DATA_EEG/EEG_TEST", "DATA_EEG/EEG_TRAIN"],
+        "data_paths": ["TUH_EEG_SEIZ/edf/dev", "TUH_EEG_SEIZ/edf/train"], # path of recordings parent folder (train or dev)
+        "target_paths": ["DATA_EEG/EEG_TEST", "DATA_EEG/EEG_TRAIN"], # target folder
         "extensions": [".edf", ".csv_bi"],
     }
 
-    for target_path in parameters["target_paths"]:
-        os.makedirs(target_path, exist_ok=True)
 
     for source_path, target_path in zip(
         parameters["data_paths"], parameters["target_paths"]
     ):
+        os.makedirs(target_path, exist_ok=True)
+        
         data_paths = TUH_DataLoader(
             source_path, extensions=parameters["extensions"]
         ).file_tuples
