@@ -4,6 +4,8 @@ DATA_EEG/TEST_50/*
 DATA_EEG/VAL_70/*
 EXPERIMENTS/*
 PLOTS/*
+!PLOTS/smape_visuals_336
+!PLOTS/smapes_pred_len
 utils/__pycache__/
 jlbPyTorchExp.sif
 TUH_EEG_SEIZ/*
