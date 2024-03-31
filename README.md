@@ -57,7 +57,7 @@ If you want to preprocess the data on your own, you need to download it from the
 
 
 
-### References
+### Code References
 
 <a id="1"> [1] </a>
 Alexandre Gramfort, Martin Luessi, Eric Larson, Denis A. Engemann, Daniel Strohmeier, Christian Brodbeck, Roman Goj, Mainak Jas, Teon Brooks, Lauri Parkkonen, and Matti S. Hämäläinen. MEG and EEG data analysis with MNE-Python. Frontiers in Neuroscience, 7(267):1–13, 2013. doi:10.3389/fnins.2013.00267 
